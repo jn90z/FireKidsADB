@@ -1,6 +1,11 @@
 name: Signed Android Release
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/release.yml'
+      - 'app/build.gradle'
 permissions:
   contents: read
 jobs:
