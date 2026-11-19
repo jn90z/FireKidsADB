@@ -24,6 +24,12 @@ android {
         }
     }
 
+    // Fire OS compatibility build: API 28 is deliberate for this prototype.
+    // Re-evaluate targetSdk and child-profile behavior before public distribution.
+    lint {
+        disable 'ExpiredTargetSdkVersion'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
