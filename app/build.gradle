@@ -7,9 +7,9 @@ android {
     defaultConfig {
         applicationId 'com.jn90z.firekidsadb'
         minSdk 26
-        targetSdk 28
-        versionCode 1
-        versionName '0.1.0'
+        targetSdk 34
+        versionCode 2
+        versionName '0.2.0'
     }
 
     signingConfigs {
@@ -22,12 +22,6 @@ android {
                 keyPassword System.getenv('FIREKIDS_KEY_PASSWORD')
             }
         }
-    }
-
-    // Fire OS compatibility build: API 28 is deliberate for this prototype.
-    // Re-evaluate targetSdk and child-profile behavior before public distribution.
-    lint {
-        disable 'ExpiredTargetSdkVersion'
     }
 
     buildTypes {
